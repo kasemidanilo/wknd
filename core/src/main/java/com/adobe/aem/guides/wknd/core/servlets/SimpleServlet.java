@@ -51,6 +51,9 @@ public class SimpleServlet extends SlingSafeMethodsServlet {
             final SlingHttpServletResponse resp) throws ServletException, IOException {
         final Resource resource = req.getResource();
         resp.setContentType("text/plain");
-        resp.getWriter().write("Title = " + resource.getValueMap().get(JcrConstants.JCR_TITLE));
+
+        String attributes = "Title = " + resource.getValueMap().get(JcrConstants.JCR_TITLE);
+        attributes += "/n"+ " Page Title= "+ resource.getValueMap().get("pageTitle");
+        resp.getWriter().write(attributes);
     }
 }

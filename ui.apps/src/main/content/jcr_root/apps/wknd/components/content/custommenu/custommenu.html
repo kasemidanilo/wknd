@@ -1,0 +1,5 @@
+<sly data-sly-use.listUse="${'custommenu.js' @ multifieldName='items1'}" >
+    <div data-sly-list="${listUse}" class="navbar">
+        <a href="${item.properties.linkUrl}" class="${item.properties.class}">${item.properties.linkText}</a>
+    </div>
+</sly>

@@ -1,0 +1,10 @@
+<sly data-sly-use.multiItems="com.adobe.aem.guides.wknd.core.models.Navigator"></sly>
+<sly data-sly-test="${wcmmode.edit && !multiItems.items1.listChildren}">
+        <div data-emptytext="Click to edit Nav Component" class="cq-placeholder"></div>
+</sly>
+
+<div class="navbar">
+        <sly data-sly-list.property="${multiItems.items1.listChildren}">
+        <a href="${property.linkUrl}" class="${property.class}">${property.linkText}</a>
+        </sly>
+    </div>

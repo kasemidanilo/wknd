@@ -3,12 +3,24 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[mobile/groups/responsive]"
-        cq:template="/conf/wknd/settings/wcm/templates/maga-template"
+        cq:template="/conf/wknd/settings/wcm/templates/maga-template1"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="wknd/components/structure/page">
         <header
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/components/content/header"/>
+               sling:resourceType="/apps/wknd/components/content/header"
+               editable="{Boolean}true"
+        />
+        <custommenu
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="/apps/wknd/components/content/custommenu"
+                editable="{Boolean}true"
+        />
+        <div
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="/apps/wknd/components/content/divwithclass"
+                editable="{Boolean}true"
+        />
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
@@ -19,6 +31,11 @@
                 <cq:responsive jcr:primaryType="nt:unstructured"/>
             </responsivegrid>
         </root>
+        <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="/apps/wknd/components/content/footer"
+                editable="{Boolean}true"
+        />
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
                 <phone

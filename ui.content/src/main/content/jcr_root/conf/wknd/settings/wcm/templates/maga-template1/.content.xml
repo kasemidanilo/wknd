@@ -4,6 +4,6 @@
     <jcr:content
         cq:templateType="/conf/wknd/settings/wcm/template-types/empty-experience-fragment"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Maga template"
+        jcr:title="Maga template1"
         status="enabled"/>
 </jcr:root>

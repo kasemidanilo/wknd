@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:tags="[experience-fragments:variation/web]"
+        cq:template="/conf/wknd/settings/wcm/templates/maga-template1"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="wknd/components/structure/xfpage">
+        <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="/apps/wknd/components/content/header"
+                editable="{Boolean}true"
+        />
+        <custommenu
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="/apps/wknd/components/content/custommenu"
+                editable="{Boolean}true"
+        />
+        <div
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="/apps/wknd/components/content/divwithclass"
+                editable="{Boolean}true"
+        />
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+        </root>
+        <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="/apps/wknd/components/content/footer"
+                editable="{Boolean}true"
+        />
+    </jcr:content>
+</jcr:root>

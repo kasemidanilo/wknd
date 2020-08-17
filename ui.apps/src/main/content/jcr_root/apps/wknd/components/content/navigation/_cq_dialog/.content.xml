@@ -18,12 +18,10 @@
                             fieldDescription="Click + to add a new page"
                             fieldLabel="Multifield collection"
                             name="./multiCol">
-
                         <field
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/container"
-                                name="./items1">
-
+                                name="./menuItems">
                             <items jcr:primaryType="nt:unstructured">
                                 <enterlinktext
                                         jcr:primaryType="nt:unstructured"
@@ -37,7 +35,6 @@
                                         fieldDescription="Enter Class name | Leave empty if doesn't have"
                                         fieldLabel="Enter Class name"
                                         name="./class"/>
-
                             </items>
                         </field>
                     </multifieldcollection>
@@ -46,4 +43,8 @@
         </items>
     </content>
 </jcr:root>
+
+
+
+
 

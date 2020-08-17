@@ -1,6 +1,13 @@
-
-<sly data-sly-use.listUse="${'navigation.js' @ multifieldName='items1'}" >
-    <div data-sly-list="${listUse}" class="navbar">
-        <a href="#" class="${item.properties.class}">${item.properties.linkText}</a>
-    </div>
+<sly data-sly-use.multiItems="com.adobe.aem.guides.wknd.core.models.NavigationModel"></sly>
+<sly data-sly-test="${wcmmode.edit && !multiItems.menuItems.listChildren}">
+    <div data-emptytext=" Navigation Component" class="cq-placeholder"></div>
 </sly>
+
+<div class="navbar">
+    <sly data-sly-list.property="${multiItems.menuItems}">
+        <a href="#" class="${property.class}">${property.linkText}</a>
+    </sly>
+</div>
+
+
+

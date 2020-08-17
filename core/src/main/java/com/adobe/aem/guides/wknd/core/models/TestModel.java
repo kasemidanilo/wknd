@@ -7,20 +7,25 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Optional;
 
 import javax.inject.Inject;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
 
 
 @Model(adaptables = Resource.class)
-public class Navigator {
+public class TestModel {
     @Inject
     @Optional
-    private List<TestModel> items1;
+    public String linkUrl;
 
-    public List<TestModel> getItems1 (){
-        Collections.sort(items1, TestModel::compareToLinkUrl);
-        return items1;
+    @Inject
+    @Optional
+    public String linkText;
+
+    @Inject
+    @Optional
+    public String linkClass;
+
+
+
+    public int compareToLinkUrl(TestModel o) {
+        return this.linkText.toLowerCase().compareTo(o.linkText.toLowerCase());
     }
-
 }

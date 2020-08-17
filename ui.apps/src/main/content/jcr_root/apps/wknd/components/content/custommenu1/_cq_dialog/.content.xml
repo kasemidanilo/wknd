@@ -42,7 +42,7 @@
                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                         fieldDescription="Enter Class name | Leave empty if doesn't have"
                                         fieldLabel="Enter Class name"
-                                        name="./class"/>
+                                        name="./linkClass"/>
 
                             </items>
                         </field>

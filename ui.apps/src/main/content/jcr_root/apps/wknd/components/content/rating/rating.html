@@ -1,0 +1,15 @@
+<sly data-sly-use.multiItems="com.adobe.aem.guides.wknd.core.models.RankNavigator"></sly>
+<sly data-sly-test="${wcmmode.edit && !multiItems.ratingModelList.listChildren}">
+    <div data-emptytext="Click to edit Nav Component" class="cq-placeholder"></div>
+</sly>
+
+<div>
+    <ol data-sly-list.property="${multiItems.ratingModelList}">
+        <li>
+            <div>
+                <p>${property.ValueRank}</p>
+                <p>${property.Rank}</p>
+            </div>
+        </li>
+    </ol>
+</div>

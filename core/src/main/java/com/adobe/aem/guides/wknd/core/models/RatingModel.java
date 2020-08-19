@@ -7,24 +7,18 @@ import org.apache.sling.models.annotations.Optional;
 
 import javax.inject.Inject;
 
-
 @Model(adaptables = Resource.class)
-public class TestModel {
+public class RatingModel {
     @Inject
     @Optional
-    public String linkUrl;
-
-    @Inject
-    @Optional
-    public String linkText;
+    public int Rank;
 
     @Inject
     @Optional
-    public String linkClass;
+    public String ValueRank;
 
 
-
-    public int compareToLinkUrl(TestModel o) {
-        return this.linkText.toLowerCase().compareTo(o.linkText.toLowerCase());
+    public int compareRank(RatingModel model) {
+        return Rank- model.Rank;
     }
 }

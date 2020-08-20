@@ -1,0 +1,21 @@
+<!--<h1>${properties}</h1>-->
+<!--<pre data-sly-use.model="com.adobe.aem.guides.wknd.core.models.ListChildrenPageModel">-->
+<!--    <sly data-sly-list.child="${model.children}">-->
+<!--        <b>${child.title}</b>-->
+<!--    </sly>-->
+<!--</pre>-->
+<pre data-sly-use.model="com.adobe.aem.guides.wknd.core.models.ListChildrenPageModel"></pre>
+<sly data-sly-test="${wcmmode.edit && !model.children}">
+    <div data-emptytext="Click to edit List Children Page Component" class="cq-placeholder"></div>
+</sly>
+
+<div>
+    <ol data-sly-list.child="${model.children}">
+        <li>
+            <div>
+                <p><b>Title:</b>${child.title}</p>
+                <p><b>Page url:</b>${child.path}</p>
+            </div>
+        </li>
+    </ol>
+</div>
